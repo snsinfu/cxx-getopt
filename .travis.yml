@@ -1,0 +1,4 @@
+dist: trusty
+language: cpp
+script:
+  - make -C tests
