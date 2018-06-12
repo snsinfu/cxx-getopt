@@ -58,8 +58,8 @@ Boost License), so you do not need to do anything on redistribution.
 ## Testing
 
 ```console
-git clone https://github.com/snsinfu/cxx-github
-cd cxx-github/tests
+git clone https://github.com/snsinfu/cxx-getopt.git
+cd cxx-getopt/tests
 make
 ```
 
