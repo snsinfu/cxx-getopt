@@ -53,7 +53,7 @@ Just download [getopt.hpp][getopt.hpp] into your include directory.
 License text is included in the header file and the license is permissive (the
 Boost License), so you do not need to do anything on redistribution.
 
-[getopt.hpp]: https://github.com/snsinfu/dim/master/cxx-getopt/getopt.hpp
+[getopt.hpp]: https://github.com/snsinfu/cxx-getopt/raw/master/getopt.hpp
 
 ## Testing
 
