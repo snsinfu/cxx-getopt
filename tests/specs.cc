@@ -19,7 +19,7 @@ TEST_CASE("getopt parses nothing if no options are there")
     char argv_2[] = "b.dat";
     char* argv_array[] = {argv_0, argv_1, argv_2, 0};
 
-    int argc = sizeof(argv_array) / sizeof(*argv_array) - 1;
+    int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
     ext::getopt getopt;
@@ -47,7 +47,7 @@ TEST_CASE("getopt recognizes options")
     char argv_3[] = "c.dat";
     char* argv_array[] = {argv_0, argv_1, argv_2, argv_3, 0};
 
-    int argc = sizeof(argv_array) / sizeof(*argv_array) - 1;
+    int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
     ext::getopt getopt;
@@ -74,7 +74,7 @@ TEST_CASE("getopt recognizes coalesced options")
     char argv_1[] = "-abc";
     char* argv_array[] = {argv_0, argv_1, 0};
 
-    int argc = sizeof(argv_array) / sizeof(*argv_array) - 1;
+    int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
     ext::getopt getopt;
@@ -103,7 +103,7 @@ TEST_CASE("getopt recognizes option argument")
     char argv_3[] = "-v";
     char* argv_array[] = {argv_0, argv_1, argv_2, argv_3, 0};
 
-    int argc = sizeof(argv_array) / sizeof(*argv_array) - 1;
+    int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
     ext::getopt getopt;
@@ -132,7 +132,7 @@ TEST_CASE("getopt recognizes coalesced option argument")
     char argv_1[] = "-vooutput";
     char* argv_array[] = {argv_0, argv_1, 0};
 
-    int argc = sizeof(argv_array) / sizeof(*argv_array) - 1;
+    int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
     ext::getopt getopt;
@@ -163,7 +163,7 @@ TEST_CASE("getopt does not treat single hyphen as an option")
     char argv_3[] = "foo.dat";
     char* argv_array[] = {argv_0, argv_1, argv_2, argv_3, 0};
 
-    int argc = sizeof(argv_array) / sizeof(*argv_array) - 1;
+    int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
     ext::getopt getopt;
@@ -192,7 +192,7 @@ TEST_CASE("getopt stops option parsing at double hyphen")
     char argv_3[] = "-1";
     char* argv_array[] = {argv_0, argv_1, argv_2, argv_3, 0};
 
-    int argc = sizeof(argv_array) / sizeof(*argv_array) - 1;
+    int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
     ext::getopt getopt;
@@ -218,7 +218,7 @@ TEST_CASE("getopt gracefully reports unrecognized option")
     char argv_1[] = "-rs";
     char* argv_array[] = {argv_0, argv_1, 0};
 
-    int argc = sizeof(argv_array) / sizeof(*argv_array) - 1;
+    int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
     ext::getopt getopt;
@@ -248,7 +248,7 @@ TEST_CASE("getopt gracefully reports missing option argument")
     char argv_1[] = "-n";
     char* argv_array[] = {argv_0, argv_1, 0};
 
-    int argc = sizeof(argv_array) / sizeof(*argv_array) - 1;
+    int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
     ext::getopt getopt;
@@ -276,7 +276,7 @@ TEST_CASE("getopt returns special char for missing argument if instructed")
     char argv_1[] = "-n";
     char* argv_array[] = {argv_0, argv_1, 0};
 
-    int argc = sizeof(argv_array) / sizeof(*argv_array) - 1;
+    int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
     ext::getopt getopt;

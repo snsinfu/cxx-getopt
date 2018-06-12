@@ -20,7 +20,7 @@ TEST_CASE("example: sed")
     char argv_3[] = "/^#/d";
     char* argv_array[] = {argv_0, argv_1, argv_2, argv_3, 0};
 
-    int argc = sizeof(argv_array) / sizeof(argv_array[0]) - 1;
+    int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
     ext::getopt getopt;
