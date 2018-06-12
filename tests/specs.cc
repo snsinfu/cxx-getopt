@@ -22,7 +22,7 @@ TEST_CASE("getopt parses nothing if no options are there")
     int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
-    ext::getopt getopt;
+    cxx::getopt getopt;
     std::vector<int> observed_opts;
 
     for (int ch; (ch = getopt(argc, argv, "abc")) != -1; ) {
@@ -50,7 +50,7 @@ TEST_CASE("getopt recognizes options")
     int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
-    ext::getopt getopt;
+    cxx::getopt getopt;
     std::vector<int> observed_opts;
 
     for (int ch; (ch = getopt(argc, argv, "abc")) != -1; ) {
@@ -77,7 +77,7 @@ TEST_CASE("getopt recognizes coalesced options")
     int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
-    ext::getopt getopt;
+    cxx::getopt getopt;
     std::vector<int> observed_opts;
 
     for (int ch; (ch = getopt(argc, argv, "abc")) != -1; ) {
@@ -106,7 +106,7 @@ TEST_CASE("getopt recognizes option argument")
     int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
-    ext::getopt getopt;
+    cxx::getopt getopt;
     std::vector<int> observed_opts;
     std::vector<char*> observed_optargs;
 
@@ -135,7 +135,7 @@ TEST_CASE("getopt recognizes coalesced option argument")
     int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
-    ext::getopt getopt;
+    cxx::getopt getopt;
     std::vector<int> observed_opts;
     std::vector<char*> observed_optargs;
 
@@ -166,7 +166,7 @@ TEST_CASE("getopt does not treat single hyphen as an option")
     int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
-    ext::getopt getopt;
+    cxx::getopt getopt;
     std::vector<int> observed_opts;
 
     for (int ch; (ch = getopt(argc, argv, "s")) != -1; ) {
@@ -195,7 +195,7 @@ TEST_CASE("getopt stops option parsing at double hyphen")
     int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
-    ext::getopt getopt;
+    cxx::getopt getopt;
     std::vector<int> observed_opts;
 
     for (int ch; (ch = getopt(argc, argv, "1")) != -1; ) {
@@ -221,7 +221,7 @@ TEST_CASE("getopt gracefully reports unrecognized option")
     int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
-    ext::getopt getopt;
+    cxx::getopt getopt;
     std::vector<int> observed_results;
     std::vector<int> observed_opts;
 
@@ -251,7 +251,7 @@ TEST_CASE("getopt gracefully reports missing option argument")
     int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
-    ext::getopt getopt;
+    cxx::getopt getopt;
     std::vector<int> observed_results;
     std::vector<int> observed_opts;
 
@@ -279,7 +279,7 @@ TEST_CASE("getopt returns special char for missing argument if instructed")
     int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
-    ext::getopt getopt;
+    cxx::getopt getopt;
     std::vector<int> observed_results;
     std::vector<int> observed_opts;
 
@@ -305,12 +305,12 @@ TEST_CASE("getopt gracefully handles empty argv")
     int argc = 0;
     char** argv = argv_array;
 
-    ext::getopt getopt;
+    cxx::getopt getopt;
     CHECK(getopt(argc, argv, "") == -1);
 }
 
 TEST_CASE("getopt gracefully handles null argv")
 {
-    ext::getopt getopt;
+    cxx::getopt getopt;
     CHECK(getopt(0, 0, "") == -1);
 }

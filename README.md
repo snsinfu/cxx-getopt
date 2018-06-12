@@ -13,7 +13,7 @@ Single-file, header-only library of a [POSIX getopt][posix-getopt] workalike.
 // command -v -o arg ...
 int main(int argc, char** argv)
 {
-    ext::getopt getopt;
+    cxx::getopt getopt;
 
     bool verbose = false;
     char const* output = "default";

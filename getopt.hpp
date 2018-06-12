@@ -30,7 +30,7 @@
 #ifndef INCLUDED_GETOPT_HPP
 #define INCLUDED_GETOPT_HPP
 
-namespace ext
+namespace cxx
 {
     /**
      * A function-object implementation of POSIX getopt.

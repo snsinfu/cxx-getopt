@@ -23,7 +23,7 @@ TEST_CASE("example: sed")
     int argc = static_cast<int>(sizeof(argv_array) / sizeof(*argv_array)) - 1;
     char** argv = argv_array;
 
-    ext::getopt getopt;
+    cxx::getopt getopt;
 
     std::string opt_extension;
     bool opt_extended = false;
