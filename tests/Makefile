@@ -42,12 +42,12 @@ test: run
 clean:
 	rm -f $(ARTIFACTS)
 
-run: $(OBJECTS) $(HEADERS)
+run: $(OBJECTS)
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJECTS)
 
 .cc.o:
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
-main.o: main.cc Catch1/catch.hpp
-specs.o: specs.cc Catch1/catch.hpp ../getopt.hpp
-examples.o: examples.cc Catch1/catch.hpp ../getopt.hpp
+main.o: Catch1/catch.hpp
+specs.o: Catch1/catch.hpp ../getopt.hpp
+examples.o: Catch1/catch.hpp ../getopt.hpp
