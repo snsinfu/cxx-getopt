@@ -60,7 +60,7 @@ namespace cxx
          * option is found in argv or an expected option argument is missing.
          * In the latter case ':' is returned if optstring starts with a ':'.
          */
-        int operator()(int argc, char** argv, char const* optstring)
+        int operator()(int argc, char* const* argv, char const* optstring)
         {
             // Implicit end of option
             if (optind >= argc
