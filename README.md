@@ -42,8 +42,8 @@ int main(int argc, char** argv)
 
 [cxx-badge]: https://img.shields.io/badge/C%2B%2B-03-orange.svg
 [license-badge]: https://img.shields.io/badge/license-Boost-blue.svg
-[travis-badge]: https://travis-ci.org/snsinfu/cxx_getopt.svg?branch=master
-[travis-url]: https://travis-ci.org/snsinfu/cxx_getopt
+[travis-badge]: https://travis-ci.org/snsinfu/cxx-getopt.svg?branch=master
+[travis-url]: https://travis-ci.org/snsinfu/cxx-getopt
 [posix-getopt]: http://pubs.opengroup.org/onlinepubs/9699919799/functions/getopt.html
 
 ## Installation
